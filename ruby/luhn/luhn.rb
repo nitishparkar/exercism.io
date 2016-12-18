@@ -1,24 +1,14 @@
 class Luhn
-  attr_reader :digits
+  attr_reader :number
 
   def initialize(number)
-    @digits = number.to_s.split('').map(&:to_i)
+    @number = number
   end
 
   def addends
-    output = []
-
-    digits.reverse.each_with_index do |digit, i|
-      output << digit && next if i.even?
-      res = digit * 2
-      if res < 10
-        output << res
-      else
-        output << res - 9
-      end
-    end
-
-    output.reverse
+    @addends ||= digits.reverse.each_with_index.map do |digit, position|
+      position.even? ? digit : double(digit)
+    end.reverse
   end
 
   def checksum
@@ -26,12 +16,12 @@ class Luhn
   end
 
   def valid?
-    checksum % 10 == 0
+    check_digit.zero?
   end
 
-  def self.create(number)
+  def self.create(partial_number)
     # Assume that the check digit is 0
-    number = number * 10
+    number = partial_number * 10
 
     # Calculate checksum with check digit 0
     # This works because we don't double the check digit in checksum calculations, just add it.
@@ -48,5 +38,19 @@ class Luhn
     number + final_digit
   end
 
+  private
+
+  def double(digit)
+    res = digit * 2
+    res < 10 ? res : res - 9
+  end
+
+  def check_digit
+    checksum % 10
+  end
+
+  def digits
+    @digits ||= number.to_s.chars.map(&:to_i)
+  end
 end
 
