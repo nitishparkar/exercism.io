@@ -1,6 +1,11 @@
 # Hello World
 
-The classical introductory exercise. Just say "Hello, World!"
+Welcome to Hello World on Exercism's Go Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
+The classical introductory exercise. Just say "Hello, World!".
 
 ["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
 the traditional first program for beginning programming in a new language
@@ -14,27 +19,26 @@ The objectives are simple:
 
 If everything goes well, you will be ready to fetch your first real exercise.
 
-## Running the tests
-
-To run the tests run the command `go test` from within the exercise directory.
-
-If the test suite contains benchmarks, you can run these with the `-bench`
-flag:
-
-    go test -bench .
-
-Keep in mind that each reviewer will run benchmarks on a different machine, with
-different specs, so the results from these benchmark tests may vary.
-
-## Further information
-
-For more detailed information about the Go track, including how to get help if
-you're having trouble, please visit the exercism.io [Go language page](http://exercism.io/languages/go/about).
-
 ## Source
 
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+### Created by
 
-## Submitting Incomplete Problems
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @k4rtik
 
+### Contributed to by
+
+- @bitfield
+- @ekingery
+- @ferhatelmas
+- @hilary
+- @kytrinyx
+- @leenipper
+- @petertseng
+- @robphoenix
+- @SebastianKristof
+- @sebito91
+- @tleen
+
+### Based on
+
+This is an exercise to introduce users to using Exercism - http://en.wikipedia.org/wiki/%22Hello,_world!%22_program
